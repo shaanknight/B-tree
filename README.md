@@ -1,7 +1,29 @@
-compile instruction : g++ B+tree.cpp
-run instruction : ./a.out
+# B-tree
+While one or two levels of index are often very helpful in speeding up queries on indexed files or blocks,
+there is a more general structure that is commonly used in commercial systems.
+The general family of data structures is called a B-tree, and the particular
+variant that is most often used and has been implemented here is known as a B+ tree.
 
-Implementation details : 
+However here we only deal with integers rather than pointers to blocks for educative purpose.
+
+### Implementation Specifications
+- INSERT X : insert X into the B+ tree
+- FIND X : print YES if X is already inserted, else NO
+- COUNT X : print number of occurrences of X in B+tree
+- RANGE X Y : print number of elements in range x to y (both x and y included)
+
+### Compile Instruction
+```sh
+g++ B+tree.cpp
+```
+
+### Run Instruction
+```sh
+./a.out
+```
+Note that the program is set to use stdin and stdout for input and output purposes respectively.
+
+### Implementation details
 It is better to look at code and understand the details, I have tried to add comments wherever suitable.
 
 Implementation has 2 structures:
